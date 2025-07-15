@@ -1,4 +1,4 @@
-# ✨ Bloop Museum Demo
+# Museum Demo
 
 This is a retro-inspired website for a local tech museum in Monroeville, PA. Built with [Eleventy (11ty)](https://www.11ty.dev/) to ensure compatibility with older browsers and machines.
 
