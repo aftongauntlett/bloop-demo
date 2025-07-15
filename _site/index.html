@@ -4,11 +4,19 @@
     <meta charset="UTF-8" />
     <title>Home</title>
     <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="preload" href="/images/bloop-logo.png" as="image" />
   </head>
   <body>
     <div class="layout">
       <aside class="sidenav">
-        <img src="/images/bloop-logo.png" alt="Bloop Logo" class="logo" />
+       <img
+  src="/images/bloop-logo.png"
+  alt="Bloop Logo"
+  class="logo"
+  width="150"
+  height="42"
+  fetchpriority="high"
+/>
         <nav class="nav-links">
           <a href="/" class="nav-item"><span>🏠</span> Home</a>
           <a href="/about/" class="nav-item"><span>📟</span> About</a>
@@ -17,14 +25,16 @@
           <a href="/contact/" class="nav-item"><span>📫</span> Contact</a>
         </nav>
       </aside>
-      <main class="main-content">
-        
+<main class="main-content">
+  <div class="page-container">
+    
 <h1>Welcome to the Bloop Museum</h1>
 
 <p>Bloop is a retro-tech and gaming museum located near Monroeville, PA. We've been preserving and showcasing vintage electronics, video games, and computer history for over 17 years.</p>
 
 <p>Come visit, donate, or schedule a tour — and experience the joy of blinking lights and floppy disks.</p>
-      </main>
+  </div>
+</main>
     </div>
   </body>
 </html>

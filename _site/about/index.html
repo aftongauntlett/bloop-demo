@@ -4,11 +4,19 @@
     <meta charset="UTF-8" />
     <title>About</title>
     <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="preload" href="/images/bloop-logo.png" as="image" />
   </head>
   <body>
     <div class="layout">
       <aside class="sidenav">
-        <img src="/images/bloop-logo.png" alt="Bloop Logo" class="logo" />
+       <img
+  src="/images/bloop-logo.png"
+  alt="Bloop Logo"
+  class="logo"
+  width="150"
+  height="42"
+  fetchpriority="high"
+/>
         <nav class="nav-links">
           <a href="/" class="nav-item"><span>🏠</span> Home</a>
           <a href="/about/" class="nav-item"><span>📟</span> About</a>
@@ -17,8 +25,9 @@
           <a href="/contact/" class="nav-item"><span>📫</span> Contact</a>
         </nav>
       </aside>
-      <main class="main-content">
-        
+<main class="main-content">
+  <div class="page-container">
+    
 <div class="about-box" style="background: var(--gray-bg); box-shadow: inset 2px 2px var(--off-white), inset -2px -2px var(--shadow);">
   <h2>About Bloop Museum</h2>
   <p>Bloop is a retro-tech and gaming museum dedicated to preserving vintage electronics, games, and media formats.</p>
@@ -40,7 +49,8 @@
 </div>
 
 
-      </main>
+  </div>
+</main>
     </div>
   </body>
 </html>

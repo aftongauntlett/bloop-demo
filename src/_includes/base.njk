@@ -4,11 +4,19 @@
     <meta charset="UTF-8" />
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="preload" href="/images/bloop-logo.png" as="image" />
   </head>
   <body>
     <div class="layout">
       <aside class="sidenav">
-        <img src="/images/bloop-logo.png" alt="Bloop Logo" class="logo" />
+       <img
+  src="/images/bloop-logo.png"
+  alt="Bloop Logo"
+  class="logo"
+  width="150"
+  height="42"
+  fetchpriority="high"
+/>
         <nav class="nav-links">
           <a href="/" class="nav-item"><span>🏠</span> Home</a>
           <a href="/about/" class="nav-item"><span>📟</span> About</a>
@@ -17,9 +25,11 @@
           <a href="/contact/" class="nav-item"><span>📫</span> Contact</a>
         </nav>
       </aside>
-      <main class="main-content">
-        {{ content | safe }}
-      </main>
+<main class="main-content">
+  <div class="page-container">
+    {{ content | safe }}
+  </div>
+</main>
     </div>
   </body>
 </html>
