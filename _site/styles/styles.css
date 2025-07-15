@@ -1,0 +1,74 @@
+/* 90s-safe colors pulled from the bloop logo */
+:root {
+  --hot-pink: #ff33cc;
+  --neon-blue: #00ffff;
+  --deep-blue: #000066;
+  --off-white: #fefefe;
+  --gray-bg: #e0e0e0;
+  --shadow: #999;
+  --border: #000;
+  --text: #000;
+}
+
+/* For layout */
+.about-box {
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 16px;
+  border: 2px solid var(--border);
+  font-family: Verdana, Geneva, sans-serif;
+  line-height: 1.4;
+}
+
+body {
+  background: #f9f9f9;
+  font-family: sans-serif;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidenav {
+  width: 180px;
+  background: var(--gray-bg);
+  padding: 20px 10px;
+  box-shadow: inset -2px -2px var(--shadow), inset 2px 2px var(--off-white);
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-item {
+  display: block;
+  background: #d0d0d0;
+  color: black;
+  padding: 8px 12px;
+  text-decoration: none;
+  border: 2px solid var(--border);
+  box-shadow: inset -1px -1px var(--shadow), inset 1px 1px var(--off-white);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.nav-item span {
+  margin-right: 6px;
+}
+
+.nav-item:hover {
+  background: var(--hot-pink);
+  color: white;
+  border-color: var(--neon-blue);
+}
