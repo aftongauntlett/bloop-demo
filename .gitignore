@@ -1,1 +1,19 @@
+# Node + Eleventy
 node_modules/
+_site/
+
+# VSCode local settings
+.vscode/
+
+# OS + Editor junk
+.DS_Store
+Thumbs.db
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.*

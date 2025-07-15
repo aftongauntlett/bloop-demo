@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ title or "Bloop Museum" }}</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+  </head>
+  <body>
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr valign="top">
+
+        <!-- Sidebar -->
+        <td width="180" bgcolor="#e0e0e0">
+          <div class="sidenav">
+            <img src="/images/bloop-logo.png" alt="Bloop Logo" class="logo" width="160" height="auto">
+            <div class="nav-links">
+              <a href="/" class="nav-item">🏠 Home</a><br>
+              <a href="/about/" class="nav-item">📟 About</a><br>
+              <a href="/visit/" class="nav-item">🗺️ Visit</a><br>
+              <a href="/catalog/" class="nav-item">📼 Catalog</a><br>
+              <a href="/contact/" class="nav-item">📫 Contact</a>
+            </div>
+          </div>
+        </td>
+
+        <!-- Main Content -->
+        <td>
+          <div class="page-container">
+            {{ content | safe }}
+          </div>
+        </td>
+
+      </tr>
+    </table>
+
+  </body>
+</html>
