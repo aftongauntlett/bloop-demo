@@ -1,6 +1,42 @@
-/* Netscape 4.0 Compatible CSS - No CSS variables or modern features */
+/* ======================================================================
+   BLOOP MUSEUM STYLES - Netscape 4.0 Compatible CSS
+   ====================================================================== */
 
-/* Basic styling for Pentium 90 with Netscape 4.0 */
+/* 
+BLOOP MUSEUM COLOR PALETTE
+To change colors easily, update these hex values throughout the file:
+- Primary Brand: #ff33cc (hot pink) 
+- Primary Dark: #cc0099 (darker pink for hovers)
+- Secondary: #00ffff (cyan/aqua)
+- Secondary Dark: #00cccc (darker cyan for hovers)
+- Accent: #ffffcc (light yellow)
+- Text Primary: #000066 (dark blue)
+- Text Visited: #663399 (purple)
+- Background: #cccccc (light gray)
+*/
+
+/* ======================================================================
+   BASE STYLES
+   ====================================================================== */
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000066;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Document foundation */
 body {
   background: #cccccc;
   font-family: Verdana, Arial, sans-serif;
@@ -9,7 +45,11 @@ body {
   padding: 0;
 }
 
-/* Main content boxes */
+/* ======================================================================
+   LAYOUT CONTAINERS
+   ====================================================================== */
+
+/* Main content containers */
 .content-box {
   margin: 20px;
   padding: 30px;
@@ -19,7 +59,6 @@ body {
   background: #e0e0e0;
 }
 
-/* Alternative backgrounds for variety */
 .content-box-light {
   margin: 20px;
   padding: 30px;
@@ -35,14 +74,11 @@ body {
   background: #ffffff;
 }
 
-.page-container h1,
-.page-container h2 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  color: #000066;
-}
+/* ======================================================================
+   SECTION SPACING & ORGANIZATION
+   ====================================================================== */
 
-/* Consistent Section Spacing */
+/* Section organization */
 .section {
   margin-bottom: 40px;
 }
@@ -51,7 +87,19 @@ body {
   margin-bottom: 20px;
 }
 
-/* Hero Section Styling */
+/* Content sections with visual separation */
+.content-section {
+  margin-bottom: 35px;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #999999;
+}
+
+/* Netscape 4.0 doesn't support :not() selector, so we use a separate class */
+.content-section-last {
+  border-bottom: none;
+}
+
+/* Hero section styling */
 .hero-section {
   margin-bottom: 35px;
   border-bottom: 3px solid #000066;
@@ -66,41 +114,11 @@ body {
   border: 1px solid #000066;
 }
 
-/* Content Section Improvements */
-.content-section {
-  margin-bottom: 35px;
-  padding-bottom: 20px;
-}
+/* ======================================================================
+   TYPOGRAPHY
+   ====================================================================== */
 
-/* Netscape 4.0 doesn't support :not() selector, so we'll use a simpler approach */
-.content-section {
-  border-bottom: 1px dotted #999999;
-}
-
-.content-section-last {
-  border-bottom: none;
-}
-
-/* Consistent Image Spacing */
-.section-image {
-  margin: 20px auto;
-  display: block;
-}
-
-/* Text Alignment Utilities */
-.text-left {
-  text-align: left;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-/* Typography Classes */
+/* Page headers */
 .page-title {
   color: #000066;
   font-size: 20px;
@@ -118,7 +136,7 @@ body {
 }
 
 .hero-subtitle {
-  color: #000066;
+  color: #175bd8;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
@@ -126,13 +144,15 @@ body {
   font-style: italic;
 }
 
+/* Section headings */
 .section-title {
   color: #000066;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
-  margin: 0 0 20px 0;
+  margin: 30px 0 20px 0;
 }
 
+/* Subsection headings (h3 and below) */
 .subsection-title {
   color: #000066;
   font-size: 14px;
@@ -140,17 +160,88 @@ body {
   margin: 15px 0 10px 0;
 }
 
-/* Utility Classes */
+/* Base HTML typography */
+h1 {
+  color: #000066;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #000066;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: #000066;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+/* Special container typography */
+.page-container h1,
+.page-container h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #000066;
+}
+
+/* Text elements */
+p {
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+/* Text utility classes */
 .caption {
   font-size: 11px;
   font-style: italic;
 }
 
+/* ======================================================================
+   TEXT ALIGNMENT UTILITIES
+   ====================================================================== */
+
+.text-left {
+  text-align: left;
+}
+
+.text-center,
 .center {
   text-align: center;
 }
 
-/* Consistent Button Styles - Need to be specific to override general link styles */
+.text-right {
+  text-align: right;
+}
+
+/* ======================================================================
+   LINKS & BUTTONS
+   ====================================================================== */
+
+/* Base link styles */
+a {
+  color: #000066;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #663399;
+}
+
+a:hover {
+  color: #ff33cc;
+  background: #ffffcc;
+}
+
+/* Button styles - Need to be specific to override general link styles */
 a.btn-primary {
   background: #ff33cc;
   color: white !important;
@@ -185,7 +276,11 @@ a.btn-secondary:hover {
   text-decoration: none !important;
 }
 
-/* Sidebar navigation */
+/* ======================================================================
+   NAVIGATION & SIDEBAR
+   ====================================================================== */
+
+/* Sidebar structure */
 .sidenav-top {
   padding: 20px 10px;
   font-family: Verdana, Geneva, sans-serif;
@@ -197,6 +292,7 @@ a.btn-secondary:hover {
   height: auto;
 }
 
+/* Navigation links */
 .nav-links {
   margin: 0;
   padding: 0;
@@ -220,7 +316,7 @@ a.btn-secondary:hover {
   border: 2px outset #ffff99;
 }
 
-/* Active page indicator */
+/* Active page navigation */
 .nav-item-active {
   display: block;
   background: #ff33cc;
@@ -233,14 +329,17 @@ a.btn-secondary:hover {
   font-weight: bold;
 }
 
-/* Active page hover - darker pink instead of yellow */
 .nav-item-active:hover {
   background: #cc0099;
   color: white !important;
   border: 2px inset #cc0099;
 }
 
-/* Sidebar footer styles */
+/* ======================================================================
+   SIDEBAR FOOTER & SOCIAL
+   ====================================================================== */
+
+/* Sidebar footer positioning */
 .sidebar-footer-absolute {
   position: absolute;
   bottom: 10px;
@@ -252,6 +351,7 @@ a.btn-secondary:hover {
   margin: 0;
 }
 
+/* Social media links in sidebar */
 .sidebar-social a {
   text-decoration: none;
 }
@@ -261,58 +361,83 @@ a.btn-secondary:hover {
   background: none;
 }
 
+.sidebar-social-title {
+  font-size: 11px;
+  font-weight: bold;
+  margin: 8px 10px 5px;
+  color: #000066;
+}
+
+.sidebar-social-link {
+  font-size: 10px;
+  display: block;
+  margin: 2px 10px;
+  color: #000066;
+  text-decoration: none;
+}
+
+.sidebar-social-link:hover {
+  color: #ff33cc !important;
+  background: none;
+}
+
+/* Support button in sidebar */
+.sidebar-support {
+  margin: 10px 10px 5px;
+  text-align: center;
+}
+
 .sidebar-support a:hover {
   background: #cc0099 !important;
   color: white !important;
 }
 
-/* Typography */
-h1 {
-  color: #000066;
-  font-size: 20px;
+.sidebar-support-button {
+  background: #ff33cc;
+  color: white;
+  padding: 6px 8px;
+  border: 1px solid #000;
+  text-decoration: none;
   font-weight: bold;
+  font-size: 10px;
+  display: inline-block;
+}
+
+.sidebar-support-button:hover {
+  background: #cc0099;
+  color: white !important;
+}
+
+/* ======================================================================
+   FOOTER
+   ====================================================================== */
+
+.footer-content {
   text-align: center;
-  margin-bottom: 20px;
+  font-size: 11px;
+  color: #666666;
 }
 
-h2 {
-  color: #000066;
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 10px;
+.footer-divider {
+  color: #999999;
 }
 
-h3 {
-  color: #000066;
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 15px;
-  margin-bottom: 8px;
+.footer-link {
+  color: #666666;
+  text-decoration: none;
+  margin: 0 8px;
+  font-size: 11px;
 }
 
-/* Paragraphs */
-p {
-  margin-bottom: 12px;
-  line-height: 1.4;
-}
-
-/* Links */
-a {
-  color: #000066;
-  text-decoration: underline;
-}
-
-a:visited {
-  color: #663399;
-}
-
-a:hover {
+.footer-link:hover {
   color: #ff33cc;
-  background: #ffffcc;
 }
 
-/* Images */
+/* ======================================================================
+   IMAGES & MEDIA
+   ====================================================================== */
+
+/* Base image styles */
 img {
   border: 1px solid #000;
   margin: 8px;
@@ -325,12 +450,30 @@ img[width] {
   margin-right: auto;
 }
 
+/* Specific image spacing */
+.section-image {
+  margin: 20px auto;
+  display: block;
+}
+
+/* Simple catalog images */
+.catalog-image {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #000;
+  margin: 20px auto;
+  display: block;
+}
+
 /* Images that should float */
 .image-float {
   margin: 8px;
 }
 
-/* Lists */
+/* ======================================================================
+   LISTS
+   ====================================================================== */
+
 ul {
   margin: 15px 0;
   padding-left: 30px;
@@ -341,7 +484,11 @@ li {
   line-height: 1.3;
 }
 
-/* Tables - Netscape 4.0 friendly */
+/* ======================================================================
+   TABLES
+   ====================================================================== */
+
+/* Netscape 4.0 friendly table styles */
 table {
   border-collapse: collapse;
 }
@@ -365,13 +512,80 @@ table[bgcolor="#ffffcc"] td {
   padding: 15px;
 }
 
+/* Tours table specific styling */
+.tours-table {
+  margin: 25px 0;
+  border-collapse: collapse;
+}
+
+.tours-table td {
+  border: 1px solid #999;
+  vertical-align: top;
+  line-height: 1.4;
+}
+
+/* Tours section with flexible columns */
+.tours-section {
+  display: flex;
+  gap: 20px;
+  margin: 25px 0;
+}
+
+/* Fallback for browsers that don't support flexbox */
+.tour-type {
+  flex: 1;
+  width: 48%;
+  float: left;
+  margin-right: 4%;
+}
+
+.tour-type:last-child {
+  margin-right: 0;
+}
+
+.tour-type h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #000066;
+  font-size: 16px;
+}
+
+.tour-type ul {
+  text-align: left;
+  margin: 15px 0;
+}
+
+.tour-type p {
+  margin-bottom: 0;
+}
+
+/* Override text alignment for tours info box to match action-box centering */
+.tours-info-box ul {
+  text-align: left;
+  list-style: disc;
+  padding-left: 30px;
+}
+
+.tours-info-box ul li {
+  margin-bottom: 8px;
+}
+
+/* ======================================================================
+   UTILITY CLASSES
+   ====================================================================== */
+
 /* Clear floats - Netscape 4.0 compatible */
 .clear-both {
   clear: both;
   height: 1px;
 }
 
-/* Theme Color Utility Classes
+/* ======================================================================
+   COLOR SYSTEM & UTILITY CLASSES
+   ====================================================================== */
+
+/*
+   Theme Color Utility Classes
    Primary Brand: #ff33cc (hot pink)
    Secondary: #00ffff (cyan/aqua) 
    Accent: #ffffcc (light yellow)
@@ -379,6 +593,8 @@ table[bgcolor="#ffffcc"] td {
    
    Usage: class="bg-primary text-white" or class="highlight-box"
 */
+
+/* Background color utilities */
 .bg-primary {
   background: #ff33cc;
 }
@@ -388,19 +604,30 @@ table[bgcolor="#ffffcc"] td {
 .bg-accent {
   background: #ffffcc;
 }
+.bg-white {
+  background: #ffffff;
+}
+
+/* Gray scale background utilities */
+.bg-gray-lightest {
+  background: #f0f0f0;
+}
+.bg-gray-lighter,
 .bg-gray-light {
   background: #e0e0e0;
 }
+.bg-gray-medium,
 .bg-gray-med {
   background: #d0d0d0;
 }
 .bg-gray-dark {
   background: #cccccc;
 }
-.bg-white {
-  background: #ffffff;
+.bg-gray-darker {
+  background: #999999;
 }
 
+/* Text color utilities */
 .text-primary {
   color: #000066;
 }
@@ -410,7 +637,14 @@ table[bgcolor="#ffffcc"] td {
 .text-black {
   color: black;
 }
+.text-muted {
+  color: #666666;
+}
+.text-visited {
+  color: #663399;
+}
 
+/* Border utilities */
 .border-black {
   border: 2px solid #000;
 }
@@ -420,8 +654,14 @@ table[bgcolor="#ffffcc"] td {
 .border-primary {
   border: 2px solid #ff33cc;
 }
+.border-gray {
+  border: 1px solid #999999;
+}
+.border-light-gray {
+  border: 1px solid #cccccc;
+}
 
-/* Common theme combinations */
+/* Common themed combinations */
 .highlight-box {
   background: #ffffcc;
   border: 2px solid #ff33cc;
@@ -437,4 +677,402 @@ table[bgcolor="#ffffcc"] td {
   margin: 25px 0;
 }
 
-/* Netscape 4.0 doesn't support CSS positioning well, so keep it simple */
+/* Button spacing within action boxes */
+.action-box .btn-spaced {
+  margin-bottom: 15px;
+  display: block;
+}
+
+.action-box .btn-spaced a {
+  margin-right: 0;
+}
+
+/* Action box with extra top margin */
+.action-box-spaced {
+  background: #00ffff;
+  border: 2px solid #000;
+  padding: 20px;
+  text-align: center;
+  margin: 55px 0 25px 0;
+}
+
+/* Small caption text */
+.caption-small {
+  font-size: 11px;
+  font-style: italic;
+}
+
+/* Disclaimer text */
+.disclaimer {
+  font-size: 11px;
+  margin-top: 15px;
+}
+
+/* List with no top margin */
+.list-no-top-margin {
+  margin-top: 0;
+}
+
+/* Centered content with max width */
+.content-centered {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.content-centered-wide {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.content-centered-list {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Text alignment override */
+.text-left {
+  text-align: left !important;
+}
+
+/* Announcement box styling */
+.announcement-box {
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+}
+
+.announcement-content {
+  padding: 15px;
+}
+
+.announcement-link {
+  font-weight: bold;
+}
+
+/* Subdued info box for tours */
+.tours-info-box {
+  background: #f0f0f0;
+  border: 2px solid #666666;
+  padding: 20px;
+  text-align: left;
+  margin: 25px 0;
+}
+
+/* ======================================================================
+   RESPONSIVE DESIGN - MODERN BROWSERS ONLY
+   ====================================================================== */
+
+/*
+   Progressive Enhancement Approach:
+   - Netscape 4.0 will ignore @media queries completely
+   - This preserves the vintage experience on old browsers
+   - Modern browsers get responsive enhancements
+*/
+
+/* Tablets and small laptops */
+@media screen and (max-width: 1280px) {
+  table[width="1200"] {
+    width: 95% !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* Tablets in portrait mode */
+@media screen and (max-width: 1024px) {
+  table[width="1200"] {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* Slightly reduce content box padding on tablets */
+  .content-box,
+  .content-box-light {
+    margin: 15px !important;
+    padding: 20px !important;
+  }
+}
+
+/* Hide catalog images when layout gets cramped */
+@media screen and (max-width: 1100px) {
+  .catalog-image {
+    display: none !important;
+  }
+
+  /* When catalog images are hidden, make text take full width */
+  .content-section table td {
+    width: 100% !important;
+    display: block !important;
+  }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 800px) {
+  /* Fix body margins that could cause asymmetric gray bars */
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Main layout adjustments */
+  table[width="1200"] {
+    width: 100% !important;
+    margin: 0 !important;
+    border: none !important;
+  }
+
+  /* Switch to vertical layout for sidebar/content */
+  table[width="1200"] tr td {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  /* Sidebar becomes top navigation on mobile */
+  td[width="250"] {
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 2px solid #999999 !important;
+    position: static !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  /* Make sidebar footer inline instead of absolute positioned */
+  .sidebar-footer-absolute {
+    position: static !important;
+    border-top: 1px solid #999999;
+    padding: 10px !important;
+    margin-top: 15px !important;
+  }
+
+  /* Content area adjustments - remove extra padding on mobile */
+  td[width="950"] {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* Remove content-box padding and margin on mobile to save space */
+  .content-box,
+  .content-box-light {
+    margin: 0 !important;
+    padding: 15px !important;
+    border: none !important;
+    background: #ffffff !important;
+  }
+
+  /* Reduce page container padding */
+  .page-container {
+    padding: 10px !important;
+  }
+
+  /* Image scaling */
+  img[width] {
+    max-width: 100% !important;
+    height: auto !important;
+    width: auto !important;
+  }
+
+  /* Logo specific sizing */
+  .logo {
+    max-width: 90px !important;
+    width: 90px !important;
+    margin: 10px auto 15px auto !important;
+  }
+
+  /* Also target the logo by its width attribute */
+  img[width="160"] {
+    max-width: 90px !important;
+    width: 90px !important;
+  }
+
+  /* Content images - reasonable mobile sizes */
+  img[width="500"] {
+    max-width: 280px !important;
+    width: 280px !important;
+  }
+
+  img[width="400"] {
+    max-width: 250px !important;
+    width: 250px !important;
+  }
+
+  img[width="350"] {
+    max-width: 220px !important;
+    width: 220px !important;
+  }
+
+  img[width="300"] {
+    max-width: 200px !important;
+    width: 200px !important;
+  }
+
+  /* Ensure all images have proper spacing */
+  .section-image {
+    margin: 15px auto !important;
+    display: block !important;
+  }
+
+  /* Tables become full-width */
+  table[cellpadding] {
+    width: 100% !important;
+  }
+
+  table[cellpadding] td {
+    display: block !important;
+    width: 100% !important;
+    padding: 10px 5px !important;
+  }
+
+  /* Tours section stacks on mobile */
+  .tours-section {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .tour-type {
+    width: 100% !important;
+    float: none !important;
+    margin-right: 0 !important;
+  }
+
+  /* Mobile navigation improvements */
+  .sidenav-top {
+    padding: 15px 10px !important;
+  }
+
+  .nav-item,
+  .nav-item-active {
+    font-size: 11px !important;
+    padding: 8px !important;
+    margin-bottom: 4px !important;
+    word-wrap: break-word !important;
+  }
+
+  /* Sidebar social section - more compact */
+  .sidebar-social-title {
+    font-size: 10px !important;
+    margin: 5px 10px 3px !important;
+  }
+
+  .sidebar-social-link {
+    font-size: 9px !important;
+    margin: 1px 10px !important;
+  }
+
+  .sidebar-support {
+    margin: 8px 10px 3px !important;
+  }
+
+  .sidebar-support-button {
+    font-size: 9px !important;
+    padding: 4px 6px !important;
+  }
+
+  /* Typography adjustments */
+  .hero-title {
+    font-size: 18px !important;
+  }
+
+  .page-title {
+    font-size: 16px !important;
+  }
+
+  /* Content boxes get less padding on mobile */
+  .content-box,
+  .content-box-light {
+    margin: 10px !important;
+    padding: 15px !important;
+  }
+
+  /* Make buttons stack vertically on mobile */
+  a.btn-primary,
+  a.btn-secondary {
+    display: block !important;
+    margin: 5px 0 !important;
+    text-align: center !important;
+  }
+
+  /* Override for buttons in action boxes with proper spacing */
+  .action-box .btn-spaced a.btn-primary,
+  .action-box .btn-spaced a.btn-secondary {
+    margin: 0 !important;
+  }
+}
+
+/* Very small phones */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 11px !important;
+  }
+
+  /* Even more compact content box */
+  .content-box,
+  .content-box-light {
+    margin: 0 !important;
+    padding: 10px !important;
+    border: none !important;
+    background: #ffffff !important;
+  }
+
+  .page-container {
+    padding: 5px !important;
+  }
+
+  /* Ultra-compact navigation */
+  .sidenav-top {
+    padding: 10px 8px !important;
+  }
+
+  .nav-item,
+  .nav-item-active {
+    font-size: 10px !important;
+    padding: 6px !important;
+    margin-bottom: 3px !important;
+  }
+
+  /* Hide social links on very small screens to save space */
+  .sidebar-footer-absolute {
+    display: none !important;
+  }
+
+  /* Keep only the main content images that are essential */
+  .content-section > img {
+    display: block !important;
+    max-width: 120px !important;
+    width: 120px !important;
+  }
+
+  /* Even smaller logo for tiny screens */
+  .logo {
+    max-width: 100px !important;
+    width: 100px !important;
+    margin: 5px auto 10px auto !important;
+  }
+
+  /* Also target the logo by its width attribute for tiny screens */
+  img[width="160"] {
+    max-width: 100px !important;
+    width: 100px !important;
+  }
+
+  /* Smaller content images for tiny screens */
+  img[width="500"] {
+    max-width: 200px !important;
+    width: 200px !important;
+  }
+
+  img[width="400"] {
+    max-width: 180px !important;
+    width: 180px !important;
+  }
+
+  img[width="350"] {
+    max-width: 160px !important;
+    width: 160px !important;
+  }
+
+  img[width="300"] {
+    max-width: 140px !important;
+    width: 140px !important;
+  }
+}
