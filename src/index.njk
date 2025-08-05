@@ -1,10 +1,100 @@
 ---
-layout: base.njk
+layout: layout.njk
 title: Home
 ---
 
-<h1>Welcome to the Bloop Museum</h1>
+{% from "components/button.njk" import button %}
 
-<p>Bloop is a retro-tech and gaming museum located near Monroeville, PA. We've been preserving and showcasing vintage electronics, video games, and computer history for over 17 years.</p>
+<div class="content-box-light">
 
-<p>Come visit, donate, or schedule a tour — and experience the joy of blinking lights and floppy disks.</p>
+<h1 class="page-title">🖥️ Welcome to the Bloop Museum</h1>
+  <h2 style="font-size: 18px; font-weight: bold; text-align: center; margin: 20px 0;" class="text-primary">
+    An Electronic Entertainment Museum dedicated to computers, games, media, and gadgets!
+  </h2>
+
+  <h3 align="center">A Message from Our Founder</h3>
+  <p align="center">
+    Watch this special message about our incredible journey to Pittsburgh:
+  </p>
+
+  <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 20px;">
+    <tr>
+      <td align="center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pe8xZongS0g" frameborder="0" allowfullscreen class="border-black"></iframe>
+      </td>
+    </tr>
+  </table>
+  
+  
+
+  
+  <table width="100%" cellpadding="12" cellspacing="0" class="border-black" style="margin: 20px 0;">
+    <tr class="bg-primary text-white">
+      <td style="font-weight: bold; text-align: center; font-size: 14px;">
+        🎉 WE DID IT: We moved to Pittsburgh! 🎉
+      </td>
+    </tr>
+    <tr class="bg-accent">
+      <td style="padding: 15px;">
+        We successfully completed our move to Penn Hills, near Monroeville! While we're still setting up our new location, 
+        we continue operating at the System Source Computer Museum. 
+        <a href="/visit/" style="font-weight: bold;">Learn more about visiting us!</a>
+        <br><br>
+        <div align="center">
+        {{ button("/thankyou/", "🎉 Read Our Thank You Message", "primary") }}
+        </div>
+      </td>
+    </tr>
+  </table>
+  
+  <h2>🎮 What Makes Us Special?</h2>
+  
+  <table width="100%" cellpadding="10" cellspacing="0">
+    <tr>
+      <td width="60%" valign="top">
+        <ul style="margin-top: 0;">
+          <li><b>25,000+ artifacts</b> and growing!</li>
+          <li><b>17+ years</b> as a pop-up museum, <b>7 years</b> brick-and-mortar</li>
+          <li><b>5,000+ tours</b> conducted across all three museums</li>
+          <li><b>Interactive exhibits</b> - you can actually use the vintage computers!</li>
+          <li><b>Educational programs</b> for all ages</li>
+        </ul>
+      </td>
+      <td width="40%" align="center">
+        <img src="/images/museum-display.jpg" alt="Museum display showcase" width="300" border="1">
+      </td>
+    </tr>
+  </table>
+  
+  <h2>🏛️ Three Museums in One!</h2>
+  <p>
+    When you visit, you get a personalized tour of <b>three</b> museums:
+  </p>
+  <ul>
+    <li><b>Bloop Museum</b> - Electronic entertainment & gaming</li>
+    <li><b><a href="http://museum.syssrc.com/" target="_blank">System Source Computer Museum</a></b> - Historic computers & technology</li>
+    <li><b><a href="https://www.nationalelectronicsmuseum.org/" target="_blank">National Electronics Museum</a></b> - Electronics & communication history</li>
+  </ul>
+  
+  <table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <td align="center">
+        <img src="/images/computer-display-tables.jpg" alt="Computer display tables" width="400" border="1">
+      </td>
+    </tr>
+  </table>
+  
+  <h2>🔥 Recent Highlights</h2>
+  <ul>
+    <li>🦸 <b>Data Recovery Heroes:</b> We helped exonerate two falsely convicted men by recovering critical data from an old floppy disk!</li>
+    <li>🖥️ <b>Oldest Running Computer:</b> Home to the 1956 Bendix G-15 - possibly North America's oldest functioning computer</li>
+    <li>💾 <b>Preservation Champions:</b> Saved the only working BIOS for rare systems like the Montgomery Ward Cybervision 2001</li>
+    <li>🌍 <b>Global Events:</b> We participate in local, regional, national, and international tech events</li>
+  </ul>
+  
+  <div class="action-box" style="margin: 20px 0;">
+    <b style="font-size: 14px;">Ready to explore?</b><br><br>
+    {{ button("/visit/", "Plan Your Visit", "primary") }}
+    {{ button("/contact/", "Schedule a Tour", "primary") }}
+  </div>
+</div>

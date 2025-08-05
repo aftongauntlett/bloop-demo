@@ -1,0 +1,10 @@
+{# Button component with props support #}
+{# Usage: {% from "components/button.njk" import button %} then {{ button("/visit/", "Plan Your Visit", "primary") }} #}
+{# Variants: "primary" (pink), "secondary" (cyan) #}
+{% macro button(href, text, variant='primary', target='') %}
+{% if variant == "secondary" %}
+<a href="{{ href }}" class="btn-secondary"{% if target %} target="{{ target }}"{% endif %}>{{ text }}</a>
+{% else %}
+<a href="{{ href }}" class="btn-primary"{% if target %} target="{{ target }}"{% endif %}>{{ text }}</a>
+{% endif %}
+{% endmacro %}

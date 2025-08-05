@@ -1,36 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>{{ title or "Bloop Museum" }}</title>
-    <link rel="stylesheet" href="/styles/styles.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>{{ title or site.name }}</title>
+    <style type="text/css">
+      /* Inline critical CSS to prevent FOUC */
+      body { background: #cccccc; margin: 0; padding: 0; font-family: Verdana, Arial, sans-serif; }
+    </style>
+    <link rel="stylesheet" href="/styles/styles.css" type="text/css">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="keywords" content="computer museum, video games, retro computing, technology, Baltimore, Pittsburgh, vintage computers, electronics">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ title or site.name }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:image" content="{{ site.url }}/images/bloop-logo.png">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   </head>
-  <body>
+  <body bgcolor="#cccccc">
 
-    <table width="100%" cellpadding="0" cellspacing="0" border="0">
-      <tr valign="top">
+    <!-- Background pattern table for visual interest -->
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#cccccc">
+      <tr>
+        <td align="center">
+          
+          <!-- Main content table -->
+          <table width="1200" cellpadding="0" cellspacing="0" border="1" align="center" bgcolor="#ffffff" style="margin-top: 10px; margin-bottom: 10px; border-color: #666666;" height="100%">
+            <tr valign="top" height="100%">
 
-        <!-- Sidebar -->
-        <td width="180" bgcolor="#e0e0e0">
-          <div class="sidenav">
-            <img src="/images/bloop-logo.png" alt="Bloop Logo" class="logo" width="160" height="auto">
-            <div class="nav-links">
-              <a href="/" class="nav-item">🏠 Home</a><br>
-              <a href="/about/" class="nav-item">📟 About</a><br>
-              <a href="/visit/" class="nav-item">🗺️ Visit</a><br>
-              <a href="/catalog/" class="nav-item">📼 Catalog</a><br>
-              <a href="/contact/" class="nav-item">📫 Contact</a>
-            </div>
-          </div>
+              <!-- Sidebar Navigation -->
+              <td width="250" bgcolor="#e0e0e0" style="border-right: 2px solid #999999; position: relative;" height="100%" valign="top">
+                <div class="sidenav-top">
+                  <img src="/images/bloop-logo.png" alt="Bloop Museum Logo" class="logo" width="160" height="auto" border="0">
+                  <div class="nav-links">
+                    {% for item in navigation %}
+                    <a href="{{ item.href }}" class="{% if title == item.title %}nav-item-active{% else %}nav-item{% endif %}">{{ item.label }}</a>
+                    {% endfor %}
+                  </div>
+                </div>
+                
+                <!-- Sidebar Footer - positioned at bottom -->
+                <div class="sidebar-footer-absolute">
+                  <div class="sidebar-social">
+                    <p style="font-size: 11px; font-weight: bold; margin: 8px 10px 5px; color: #000066;">Follow Us:</p>
+                    <a href="{{ site.social.facebook }}" target="_blank" style="font-size: 10px; display: block; margin: 2px 10px; color: #000066;">📘 Facebook</a>
+                    <a href="{{ site.social.instagram }}" target="_blank" style="font-size: 10px; display: block; margin: 2px 10px; color: #000066;">📷 Instagram</a>
+                    <a href="{{ site.social.patreon }}" target="_blank" style="font-size: 10px; display: block; margin: 2px 10px; color: #000066;">💝 Patreon</a>
+                  </div>
+                  
+                  <div class="sidebar-support" style="margin: 10px 10px 5px; text-align: center;">
+                    <a href="https://givebutter.com/bloopholiday" target="_blank" style="background: #ff33cc; color: white; padding: 6px 8px; border: 1px solid #000; text-decoration: none; font-weight: bold; font-size: 10px; display: inline-block;">💝 Support Us</a>
+                  </div>
+                </div>
+              </td>
+
+              <!-- Main Content Area -->
+              <td width="950" bgcolor="#ffffff" style="padding: 0;">
+                <div class="page-container">
+                  {{ content | safe }}
+                </div>
+              </td>
+
+            </tr>
+          </table>
+          
         </td>
+      </tr>
+    </table>
 
-        <!-- Main Content -->
-        <td>
-          <div class="page-container">
-            {{ content | safe }}
+    <!-- Footer -->
+    <table width="1200" cellpadding="10" cellspacing="0" border="1" align="center" bgcolor="#d0d0d0" style="margin-bottom: 10px; border-color: #666666;">
+      <tr>
+        <td style="text-align: center; font-size: 11px; color: #666;">
+          <hr size="1" color="#999" width="90%">
+          
+          <!-- Footer Navigation -->
+          <div style="margin-bottom: 10px;">
+            {% for item in navigation %}
+            <a href="{{ item.href }}" style="color: #666; text-decoration: none; margin: 0 8px; font-size: 11px;">{{ item.label }}</a>{% if not loop.last %} |{% endif %}
+            {% endfor %}
           </div>
+          
+          &copy; 2025 {{ site.name }} | EIN {{ site.organization.ein }} | A {{ site.organization.type }}
         </td>
-
+      </tr>
+    </table>
+        </td>
       </tr>
     </table>
 

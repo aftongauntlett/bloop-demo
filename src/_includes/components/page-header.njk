@@ -1,0 +1,4 @@
+{% macro pageHeader(title, emoji="") %}
+<div class="content-box">
+  <h1 class="page-title">{% if emoji %}{{ emoji }} {% endif %}{{ title }}</h1>
+{% endmacro %}

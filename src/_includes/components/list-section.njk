@@ -1,0 +1,20 @@
+{# List Section Component #}
+{# Usage: {% include "components/list-section.njk", {
+  title: "Section Title",
+  items: [
+    { text: "Item text", highlight: "optional bold text" },
+    { text: "Another item" }
+  ]
+} %} #}
+
+<div class="section">
+  <h3 class="section-title">{{ title }}</h3>
+  
+  <ul>
+    {% for item in items %}
+      <li>
+        {% if item.highlight %}<b>{{ item.highlight }}:</b> {% endif %}{{ item.text | safe }}
+      </li>
+    {% endfor %}
+  </ul>
+</div>

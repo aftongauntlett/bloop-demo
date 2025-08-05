@@ -1,0 +1,10 @@
+{# Text Section Component #}
+{# Usage: {% include "components/text-section.njk", {
+  title: "Section Title",
+  content: "HTML content or plain text"
+} %} #}
+
+<div class="section">
+  <h3 class="section-title">{{ title }}</h3>
+  {{ content | safe }}
+</div>
