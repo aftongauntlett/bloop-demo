@@ -19,21 +19,13 @@ To change colors easily, update these hex values throughout the file:
    BASE STYLES
    ====================================================================== */
 
-/* Skip link for accessibility */
+/* Skip link for accessibility - Netscape 4.0 compatible */
 .skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
   background: #000066;
   color: white;
   padding: 8px;
   text-decoration: none;
-  border-radius: 0 0 4px 4px;
-  z-index: 1000;
-}
-
-.skip-link:focus {
-  top: 0;
+  display: none; /* Hide from Netscape 4.0 since positioning is buggy */
 }
 
 /* Document foundation */
@@ -339,16 +331,12 @@ a.btn-secondary:hover {
    SIDEBAR FOOTER & SOCIAL
    ====================================================================== */
 
-/* Sidebar footer positioning */
+/* Sidebar footer positioning - Netscape 4.0 compatible */
 .sidebar-footer-absolute {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  padding: 5px 10px 10px 10px;
+  padding: 15px 10px 10px 10px;
   border-top: 1px solid #999999;
   background: #e0e0e0;
-  margin: 0;
+  margin-top: 20px;
 }
 
 /* Social media links in sidebar */

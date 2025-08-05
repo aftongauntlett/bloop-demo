@@ -5,7 +5,24 @@
     <title>{{ title or site.name }}</title>
     <style type="text/css">
       /* Inline critical CSS to prevent FOUC */
-      body { background: #cccccc; margin: 0; padding: 0; font-family: Verdana, Arial, sans-serif; }
+      body { background: #cccccc; margin: 0; padding: 0; font-family: Verdana, Arial, sans-serif; font-size: 12px; }
+      .content-box { margin: 20px; padding: 30px; border: 2px solid #000; background: #e0e0e0; font-family: Verdana, Geneva, sans-serif; line-height: 1.5; }
+      .content-box-light { margin: 20px; padding: 30px; border: 2px solid #000; background: #f0f0f0; font-family: Verdana, Geneva, sans-serif; line-height: 1.5; }
+      .nav-item { display: block; background: #d0d0d0; color: black; padding: 10px; text-decoration: none; border: 2px outset #d0d0d0; font-size: 12px; margin-bottom: 8px; font-weight: bold; }
+      .nav-item-active { display: block; background: #ff33cc; color: white; padding: 10px; text-decoration: none; border: 2px inset #ff33cc; font-size: 12px; margin-bottom: 8px; font-weight: bold; }
+      .btn-primary { background: #ff33cc; color: white; padding: 8px 16px; border: 2px solid #000; text-decoration: none; font-weight: bold; display: inline-block; margin-right: 10px; }
+      .btn-secondary { background: #00ffff; color: black; padding: 8px 16px; border: 2px solid #000; text-decoration: none; font-weight: bold; display: inline-block; margin-right: 10px; }
+      .text-center { text-align: center; }
+      .bg-primary { background: #ff33cc; }
+      .bg-accent { background: #ffffcc; }
+      .text-white { color: white; }
+      .border-black { border: 2px solid #000; }
+      .section-title { color: #000066; font-size: 18px; font-weight: bold; margin: 30px 0 20px 0; }
+      .page-title { color: #000066; font-size: 20px; font-weight: bold; text-align: center; margin: 0 0 25px 0; }
+      .hero-title { color: #000066; font-size: 22px; font-weight: bold; text-align: center; margin: 0 0 15px 0; }
+      .hero-subtitle { color: #175bd8; font-size: 16px; font-weight: bold; text-align: center; margin: 0 0 25px 0; font-style: italic; }
+      .action-box { background: #00ffff; border: 2px solid #000; padding: 20px; text-align: center; margin: 25px 0; }
+      .highlight-box { background: #ffffcc; border: 2px solid #ff33cc; padding: 20px; text-align: center; margin: 25px 0; }
     </style>
     <link rel="stylesheet" href="/styles/styles.css" type="text/css">
     <!-- Modern meta tags that Netscape 4.0 will ignore -->
@@ -79,6 +96,11 @@
           </div>
           
           &copy; 2025 {{ site.name }} | EIN {{ site.organization.ein }} | A {{ site.organization.type }}
+          <br><br>
+          <div style="font-size: 11px; color: #666666; font-style: italic; margin: 5px;">
+            💻 Technical Note: This site is designed for Netscape 4.0/Pentium 90 compatibility for museum display purposes.<br>
+            Built with 💜 by <a href="https://aftongauntlett.com" target="_blank" style="color: #666666;">Afton Gauntlett</a>.
+          </div>
         </td>
       </tr>
     </table>
