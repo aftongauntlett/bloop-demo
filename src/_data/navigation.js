@@ -1,32 +1,32 @@
 // Eleventy 3.x: Centralized navigation data
 export default [
   {
-    label: "🏠 Home",
+    label: "► Home",
     href: "/",
     title: "Home",
   },
   {
-    label: "📟 About",
+    label: "● About",
     href: "/about/",
     title: "About",
   },
   {
-    label: "💾 Catalog",
+    label: "■ Catalog",
     href: "/catalog/",
     title: "Catalog",
   },
   {
-    label: "🗺️ Visit",
+    label: "♦ Visit",
     href: "/visit/",
     title: "Visit",
   },
   {
-    label: "📫 Contact",
+    label: "@ Contact",
     href: "/contact/",
     title: "Contact",
   },
   {
-    label: "🎉 Thank You",
+    label: "★ Thank You",
     href: "/thankyou/",
     title: "Thank You",
   },

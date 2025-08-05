@@ -4,48 +4,31 @@
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <title>{{ title or site.name }}</title>
     <style type="text/css">
-      /* Inline critical CSS to prevent FOUC */
-      body { background: #cccccc; margin: 0; padding: 0; font-family: Verdana, Arial, sans-serif; font-size: 12px; }
-      .content-box { margin: 20px; padding: 30px; border: 2px solid #000; background: #e0e0e0; font-family: Verdana, Geneva, sans-serif; line-height: 1.5; }
-      .content-box-light { margin: 20px; padding: 30px; border: 2px solid #000; background: #f0f0f0; font-family: Verdana, Geneva, sans-serif; line-height: 1.5; }
-      .nav-item { display: block; background: #d0d0d0; color: black; padding: 10px; text-decoration: none; border: 2px outset #d0d0d0; font-size: 12px; margin-bottom: 8px; font-weight: bold; }
-      .nav-item-active { display: block; background: #ff33cc; color: white; padding: 10px; text-decoration: none; border: 2px inset #ff33cc; font-size: 12px; margin-bottom: 8px; font-weight: bold; }
-      .btn-primary { background: #ff33cc; color: white; padding: 8px 16px; border: 2px solid #000; text-decoration: none; font-weight: bold; display: inline-block; margin-right: 10px; }
-      .btn-secondary { background: #00ffff; color: black; padding: 8px 16px; border: 2px solid #000; text-decoration: none; font-weight: bold; display: inline-block; margin-right: 10px; }
-      .text-center { text-align: center; }
-      .bg-primary { background: #ff33cc; }
-      .bg-accent { background: #ffffcc; }
-      .text-white { color: white; }
-      .border-black { border: 2px solid #000; }
-      .section-title { color: #000066; font-size: 18px; font-weight: bold; margin: 30px 0 20px 0; }
-      .page-title { color: #000066; font-size: 20px; font-weight: bold; text-align: center; margin: 0 0 25px 0; }
-      .hero-title { color: #000066; font-size: 22px; font-weight: bold; text-align: center; margin: 0 0 15px 0; }
-      .hero-subtitle { color: #175bd8; font-size: 16px; font-weight: bold; text-align: center; margin: 0 0 25px 0; font-style: italic; }
-      .action-box { background: #00ffff; border: 2px solid #000; padding: 20px; text-align: center; margin: 25px 0; }
-      .highlight-box { background: #ffffcc; border: 2px solid #ff33cc; padding: 20px; text-align: center; margin: 25px 0; }
+      /* Minimal CSS for Netscape 4.0 compatibility */
+      body { background: #000000; font-family: Verdana, Arial, sans-serif; font-size: 12px; }
     </style>
     <link rel="stylesheet" href="/styles/styles.css" type="text/css">
     <!-- Modern meta tags that Netscape 4.0 will ignore -->
     <meta name="description" content="{{ site.description }}">
     <meta name="keywords" content="computer museum, video games, retro computing, technology, Baltimore, Pittsburgh, vintage computers, electronics">
   </head>
-  <body bgcolor="#cccccc">
+  <body bgcolor="#000000">
     <!-- Skip link for keyboard navigation -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Background pattern table for visual interest -->
-    <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#cccccc">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#000000">
       <tr>
         <td align="center">
           
           <!-- Main content table -->
-          <table width="1200" cellpadding="0" cellspacing="0" border="1" align="center" bgcolor="#ffffff" style="margin-top: 10px; margin-bottom: 10px; border-color: #666666;" height="100%">
+          <table width="760" cellpadding="0" cellspacing="0" border="2" align="center" bgcolor="#ffffff" style="margin-top: 10px; margin-bottom: 10px; border-color: #000066;" height="100%">
             <tr valign="top" height="100%">
 
               <!-- Sidebar Navigation -->
-              <td width="250" bgcolor="#e0e0e0" style="border-right: 2px solid #999999; position: relative;" height="100%" valign="top">
+              <td width="250" bgcolor="#e0e0e0" style="border-right: 3px solid #000066; position: relative;" height="100%" valign="top">
                 <div class="sidenav-top">
-                  <img src="/images/bloop-logo.png" alt="Bloop Museum Logo" class="logo" width="160" height="auto" border="0">
+                  <img src="/images/bloop-logo.gif" alt="Bloop Museum Logo" class="logo" width="160" height="78" border="0">
                   <nav class="nav-links" role="navigation" aria-label="Main navigation">
                     {% for item in navigation %}
                     <a href="{{ item.href }}" class="{% if title == item.title %}nav-item-active{% else %}nav-item{% endif %}"{% if title == item.title %} aria-current="page"{% endif %}>{{ item.label }}</a>
@@ -57,19 +40,19 @@
                 <div class="sidebar-footer-absolute">
                   <div class="sidebar-social">
                     <p class="sidebar-social-title">Follow Us:</p>
-                    <a href="{{ site.social.facebook }}" target="_blank" class="sidebar-social-link">📘 Facebook</a>
-                    <a href="{{ site.social.instagram }}" target="_blank" class="sidebar-social-link">📷 Instagram</a>
-                    <a href="{{ site.social.patreon }}" target="_blank" class="sidebar-social-link">💝 Patreon</a>
+                    <a href="{{ site.social.facebook }}" target="_blank" class="sidebar-social-link">♦ Facebook</a>
+                    <a href="{{ site.social.instagram }}" target="_blank" class="sidebar-social-link">● Instagram</a>
+                    <a href="{{ site.social.patreon }}" target="_blank" class="sidebar-social-link">♥ Patreon</a>
                   </div>
                   
                   <div class="sidebar-support">
-                    <a href="https://givebutter.com/bloopholiday" target="_blank" class="sidebar-support-button">💝 Support Us</a>
+                    <a href="https://givebutter.com/bloopholiday" target="_blank" class="sidebar-support-button">★ Support Us</a>
                   </div>
                 </div>
               </td>
 
               <!-- Main Content Area -->
-              <td width="950" bgcolor="#ffffff" style="padding: 0;">
+              <td width="710" bgcolor="#ffffff" style="padding: 0;">
                 <main id="main-content" class="page-container">
                   {{ content | safe }}
                 </main>
@@ -83,7 +66,7 @@
     </table>
 
     <!-- Footer -->
-    <table width="1200" cellpadding="10" cellspacing="0" border="1" align="center" bgcolor="#d0d0d0" style="margin-bottom: 10px; border-color: #666666;">
+    <table width="760" cellpadding="10" cellspacing="0" border="2" align="center" bgcolor="#d0d0d0" style="margin-bottom: 10px; border-color: #000066;">
       <tr>
         <td class="footer-content">
           <hr size="1" class="footer-divider" width="90%">
@@ -98,12 +81,9 @@
           &copy; 2025 {{ site.name }} | EIN {{ site.organization.ein }} | A {{ site.organization.type }}
           <br><br>
           <div style="font-size: 11px; color: #666666; font-style: italic; margin: 5px;">
-            💻 Technical Note: This site is designed for Netscape 4.0/Pentium 90 compatibility for museum display purposes.<br>
-            Built with 💜 by <a href="https://aftongauntlett.com" target="_blank" style="color: #666666;">Afton Gauntlett</a>.
+            ♦ Technical Note: This site is optimized for Netscape 4.0/Pentium 90 compatibility and ProtoWeb.org vintage browser emulation.<br>
+            Built with ♥ by <a href="https://aftongauntlett.com" target="_blank" style="color: #666666;">Afton Gauntlett</a>.
           </div>
-        </td>
-      </tr>
-    </table>
         </td>
       </tr>
     </table>

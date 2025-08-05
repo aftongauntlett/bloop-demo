@@ -21,7 +21,20 @@ title: Home
   <table width="100%" cellpadding="0" cellspacing="0">
     <tr>
       <td align="center">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/pe8xZongS0g" frameborder="0" allowfullscreen class="border-black"></iframe>
+        <!-- Video for modern browsers -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pe8xZongS0g" frameborder="0" allowfullscreen class="border-black">
+          <!-- Fallback content for browsers that don't support iframe (like Netscape 4.0) -->
+          <table cellpadding="10" cellspacing="0" border="2" bgcolor="#ffffcc" width="560">
+            <tr>
+              <td align="center">
+                <img src="/images/owner-press-photo.jpeg" alt="Museum Founder" width="200" height="150" border="1"><br>
+                <b>Watch Our Founder's Message</b><br>
+                <a href="https://www.youtube.com/watch?v=pe8xZongS0g" target="_blank">Click here to view on YouTube</a><br>
+                <small>(Requires modern browser with internet connection)</small>
+              </td>
+            </tr>
+          </table>
+        </iframe>
       </td>
     </tr>
   </table>
