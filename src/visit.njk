@@ -6,38 +6,35 @@ title: Visit Us
 {% from "components/button.njk" import button %}
 
 <div class="content-box">
-  <h1 class="page-title">🗺️ Visit the Bloop Museum</h1>
+  <h1 class="page-title">Visit the Bloop Museum</h1>
   
-  <table width="100%" cellpadding="0" cellspacing="0">
-    <tr>
-      <td align="center">
-        <img src="/images/museum-display.jpg" alt="Our new building in Penn Hills" width="500" border="1">
-      </td>
-    </tr>
-  </table>
+  <div class="content-section">
+    <div class="text-center">
+      <img src="/images/museum-display.jpg" alt="Our new building in Penn Hills" width="500" border="1" class="section-image">
+    </div>
 
-  <h3>📍 Current Location (During Transition)</h3>
-  <p>
-    <b>System Source Computer Museum</b><br>
-    <i>Near Baltimore, MD</i>
-  </p>
-  <p>
-    While we're setting up our new location, we continue operating at our current location. When you visit, you get a personalized tour of <b>three museums</b>:
-  </p>
-  <ul>
-    <li>🎮 <b>Bloop Museum</b> - Electronic entertainment & gaming</li>
-    <li>💻 <b>System Source Computer Museum</b> - Historic computers & technology</li>
-    <li>📡 <b>National Electronics Museum</b> - Electronics & communication history</li>
-  </ul>
+    <h3 class="subsection-title">Current Location (During Transition)</h3>
+    <p>
+      <b>System Source Computer Museum</b><br>
+      <i>Near Baltimore, MD</i>
+    </p>
+    <p>
+      While we're setting up our new location, we continue operating at our current location. When you visit, you get a personalized tour of <b>three museums</b>:
+    </p>
+    <ul>
+      <li><b>Bloop Museum</b> - Electronic entertainment & gaming</li>
+      <li><b>System Source Computer Museum</b> - Historic computers & technology</li>
+      <li><b>National Electronics Museum</b> - Electronics & communication history</li>
+    </ul>
+  </div>
 
-  <h3>🏗️ Future Location</h3>
-  <p>
-    <b>Penn Hills, near Monroeville, PA</b><br>
-    <i>Opening in phases - stay tuned for updates!</i>
-  </p>
-  
-
-  
+  <div class="content-section">
+    <h3 class="subsection-title">Future Location</h3>
+    <p>
+      <b>Penn Hills, near Monroeville, PA</b><br>
+      <i>Opening in phases - stay tuned for updates!</i>
+    </p>
+  </div>
   <h3>🎟️ Schedule Your Visit</h3>
   <p>
     <b>Ready to visit?</b> {{ button("https://docs.google.com/forms/d/1QFuS2CZ8rJHTE4H5AA5qYRW8fTr0htWcf3iSkEwoF54/", "Schedule a tour here!", "primary", "_blank") }}

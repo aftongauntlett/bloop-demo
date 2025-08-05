@@ -12,7 +12,7 @@ body {
 /* Main content boxes */
 .content-box {
   margin: 20px;
-  padding: 25px;
+  padding: 30px;
   border: 2px solid #000;
   font-family: Verdana, Geneva, sans-serif;
   line-height: 1.5;
@@ -22,7 +22,7 @@ body {
 /* Alternative backgrounds for variety */
 .content-box-light {
   margin: 20px;
-  padding: 25px;
+  padding: 30px;
   border: 2px solid #000;
   font-family: Verdana, Geneva, sans-serif;
   line-height: 1.5;
@@ -47,8 +47,57 @@ body {
   margin-bottom: 40px;
 }
 
-.section:last-child {
+.section-last {
   margin-bottom: 20px;
+}
+
+/* Hero Section Styling */
+.hero-section {
+  margin-bottom: 35px;
+  border-bottom: 3px solid #000066;
+  padding-bottom: 25px;
+}
+
+.hero-divider {
+  width: 80%;
+  height: 2px;
+  background: #ff33cc;
+  margin: 25px auto;
+  border: 1px solid #000066;
+}
+
+/* Content Section Improvements */
+.content-section {
+  margin-bottom: 35px;
+  padding-bottom: 20px;
+}
+
+/* Netscape 4.0 doesn't support :not() selector, so we'll use a simpler approach */
+.content-section {
+  border-bottom: 1px dotted #999999;
+}
+
+.content-section-last {
+  border-bottom: none;
+}
+
+/* Consistent Image Spacing */
+.section-image {
+  margin: 20px auto;
+  display: block;
+}
+
+/* Text Alignment Utilities */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 /* Typography Classes */
@@ -58,6 +107,23 @@ body {
   font-weight: bold;
   text-align: center;
   margin: 0 0 25px 0;
+}
+
+.hero-title {
+  color: #000066;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 15px 0;
+}
+
+.hero-subtitle {
+  color: #000066;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 25px 0;
+  font-style: italic;
 }
 
 .section-title {
@@ -260,7 +326,7 @@ img[width] {
 }
 
 /* Images that should float */
-img[style*="float"] {
+.image-float {
   margin: 8px;
 }
 
@@ -299,8 +365,8 @@ table[bgcolor="#ffffcc"] td {
   padding: 15px;
 }
 
-/* Clear floats */
-div[style*="clear"] {
+/* Clear floats - Netscape 4.0 compatible */
+.clear-both {
   clear: both;
   height: 1px;
 }
@@ -359,15 +425,16 @@ div[style*="clear"] {
 .highlight-box {
   background: #ffffcc;
   border: 2px solid #ff33cc;
-  padding: 10px;
-  margin: 20px 0;
+  padding: 15px;
+  margin: 25px 0;
 }
 
 .action-box {
   background: #00ffff;
   border: 2px solid #000;
-  padding: 15px;
+  padding: 20px;
   text-align: center;
+  margin: 25px 0;
 }
 
 /* Netscape 4.0 doesn't support CSS positioning well, so keep it simple */

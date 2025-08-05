@@ -5,100 +5,113 @@ title: Catalog
 {% from "components/button.njk" import button %}
 
 <div class="content-box">
-  <h1 class="page-title">🖥️ Museum Catalog</h1>
+  <h1 class="page-title">Museum Catalog</h1>
   
-  <p>
-    <b>Our Collection:</b> We've recently inventoried our <b>25,000th artifact!</b> Here's a taste of what you'll find at the Bloop Museum.
-  </p>
+  <div class="content-section">
+    <p>
+      <b>Our Collection:</b> We've recently inventoried our <b>25,000th artifact!</b> Here's a taste of what you'll find at the Bloop Museum.
+    </p>
+  </div>
 
-  <table width="100%" cellpadding="10" cellspacing="0">
-    <tr>
-      <td width="60%" valign="top">
-        <h3>🎮 Video Games & Consoles</h3>
-        <p>From Pong to PlayStation, we showcase the evolution of electronic entertainment. Our video game exhibit features rare consoles, arcade machines, and thousands of games across multiple platforms.</p>
-        <ul>
-          <li>Classic arcade machines</li>
-          <li>Home console systems from every generation</li>
-          <li>Rare and prototype gaming hardware</li>
-          <li>Thousands of games across multiple platforms</li>
-        </ul>
-      </td>
-      <td width="40%" align="center" valign="top">
-        <img src="/images/computer-display.jpg" alt="Computer display setup" width="300" border="1">
-      </td>
-    </tr>
-  </table>
+  <div class="content-section">
+    <table width="100%" cellpadding="10" cellspacing="0">
+      <tr>
+        <td width="60%" valign="top">
+          <h3 class="subsection-title">Video Games & Consoles</h3>
+          <p>From Pong to PlayStation, we showcase the evolution of electronic entertainment. Our video game exhibit features rare consoles, arcade machines, and thousands of games across multiple platforms.</p>
+          <ul>
+            <li>Classic arcade machines</li>
+            <li>Home console systems from every generation</li>
+            <li>Rare and prototype gaming hardware</li>
+            <li>Thousands of games across multiple platforms</li>
+          </ul>
+        </td>
+        <td width="40%" class="text-center" valign="top">
+          <img src="/images/computer-display.jpg" alt="Computer display setup" width="300" border="1" class="section-image">
+        </td>
+      </tr>
+    </table>
+  </div>
 
-  <table width="100%" cellpadding="10" cellspacing="0">
-    <tr>
-      <td width="40%" align="center" valign="top">
-        <img src="/images/computer-display-tables.jpg" alt="Historic computer displays" width="300" border="1">
-      </td>
-      <td width="60%" valign="top">
-        <h3>💻 Historic Computers</h3>
-        <p><b>Featured:</b> The <a href="https://www.youtube.com/playlist?list=PLnw98JPyObn3QSIwUz5Iv6NA1x-uGFqAa" target="_blank" rel="noopener noreferrer">Bendix G-15</a> - a programmable vacuum tube computer from 1956, possibly the oldest running computer in North America!</p>
-        <ul>
-          <li>Early programmable machines you can try</li>
-          <li>IBM System/360 gear with amazing historical significance</li>
-          <li>Apple computers from different eras</li>
-          <li>Rare systems like the Montgomery Ward Cybervision 2001</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
+  <div class="content-section">
+    <table width="100%" cellpadding="10" cellspacing="0">
+      <tr>
+        <td width="40%" class="text-center" valign="top">
+          <img src="/images/computer-display-tables.jpg" alt="Historic computer displays" width="300" border="1" class="section-image">
+        </td>
+        <td width="60%" valign="top">
+          <h3 class="subsection-title">Historic Computers</h3>
+          <p><b>Featured:</b> The <a href="https://www.youtube.com/playlist?list=PLnw98JPyObn3QSIwUz5Iv6NA1x-uGFqAa" target="_blank" rel="noopener noreferrer">Bendix G-15</a> - a programmable vacuum tube computer from 1956, possibly the oldest running computer in North America!</p>
+          <ul>
+            <li>Early programmable machines you can try</li>
+            <li>IBM System/360 gear with amazing historical significance</li>
+            <li>Apple computers from different eras</li>
+            <li>Rare systems like the Montgomery Ward Cybervision 2001</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="content-section">
+    <table width="100%" cellpadding="10" cellspacing="0">
+      <tr>
+        <td width="60%" valign="top">
+          <h3 class="subsection-title">Audio/Video Equipment</h3>
+          <p>We collect weird, obscure, and failed media formats! From Betamax to MiniDisc, LaserDisc to 8-track - if it played media, we probably have it.</p>
+          <ul>
+            <li>Betamax and VHS systems</li>
+            <li>LaserDisc and DVD players</li>
+            <li>8-track and cassette decks</li>
+            <li>MiniDisc and other rare formats</li>
+          </ul>
+        </td>
+        <td width="40%" class="text-center" valign="top">
+          <img src="/images/museum-workspace-area.jpg" alt="Museum workspace and equipment area" width="300" border="1" class="section-image">
+        </td>
+      </tr>
+    </table>
+  </div>
 
-  <table width="100%" cellpadding="10" cellspacing="0">
-    <tr>
-      <td width="60%" valign="top">
-        <h3>📺 Audio/Video Equipment</h3>
-        <p>We collect weird, obscure, and failed media formats! From Betamax to MiniDisc, LaserDisc to 8-track - if it played media, we probably have it.</p>
-        <ul>
-          <li>Betamax and VHS systems</li>
-          <li>LaserDisc and DVD players</li>
-          <li>8-track and cassette decks</li>
-          <li>MiniDisc and other rare formats</li>
-        </ul>
-      </td>
-      <td width="40%" align="center" valign="top">
-        <img src="/images/museum-workspace-area.jpg" alt="Museum workspace and equipment area" width="300" border="1">
-      </td>
-    </tr>
-  </table>
+  <div class="content-section">
+    <table width="100%" cellpadding="10" cellspacing="0">
+      <tr>
+        <td width="40%" class="text-center" valign="top">
+          <img src="/images/museum-shelf-display.jpg" alt="Tech gadgets display" width="300" border="1" class="section-image">
+        </td>
+        <td width="60%" valign="top">
+          <h3 class="subsection-title">Tech Gadgets</h3>
+          <p>Remember your first MP3 player? Your brick phone? We preserve the gadgets that shaped our digital lives, no matter how obsolete they seem today.</p>
+          <ul>
+            <li>Early mobile phones and PDAs</li>
+            <li>MP3 players and portable media devices</li>
+            <li>Digital cameras and camcorders</li>
+            <li>Electronic organizers and calculators</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
 
-  <table width="100%" cellpadding="10" cellspacing="0">
-    <tr>
-      <td width="40%" align="center" valign="top">
-        <img src="/images/museum-shelf-display.jpg" alt="Tech gadgets display" width="300" border="1">
-      </td>
-      <td width="60%" valign="top">
-        <h3>📱 Tech Gadgets</h3>
-        <p>Remember your first MP3 player? Your brick phone? We preserve the gadgets that shaped our digital lives, no matter how obsolete they seem today.</p>
-        <ul>
-          <li>Early mobile phones and PDAs</li>
-          <li>MP3 players and portable media devices</li>
-          <li>Digital cameras and camcorders</li>
-          <li>Electronic organizers and calculators</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
+  <div class="content-section">
+    <h3 class="section-title">Notable Achievements</h3>
+    <ul>
+      <li><b>Data Recovery Heroes:</b> We recovered critical data from an old floppy disk that helped <a href="https://www.patreon.com/posts/time-to-preserve-78074244" target="_blank" rel="noopener noreferrer">exonerate two falsely convicted men</a></li>
+      <li><b>Preservation Champions:</b> We saved the only known working BIOS for rare computer systems</li>
+      <li><b>Community Educators:</b> Over 5,000 tours conducted across all three museums</li>
+      <li><b>Digital Archivists:</b> Thousands of edits contributed to online game and media databases yearly</li>
+    </ul>
+  </div>
 
-  <h3>🏆 Notable Achievements</h3>
-  <ul>
-    <li><b>Data Recovery Heroes:</b> We recovered critical data from an old floppy disk that helped <a href="https://www.patreon.com/posts/time-to-preserve-78074244" target="_blank" rel="noopener noreferrer">exonerate two falsely convicted men</a></li>
-    <li><b>Preservation Champions:</b> We saved the only known working BIOS for rare computer systems</li>
-    <li><b>Community Educators:</b> Over 5,000 tours conducted across all three museums</li>
-    <li><b>Digital Archivists:</b> Thousands of edits contributed to online game and media databases yearly</li>
-  </ul>
-
-  <h3>🔧 Interactive Experiences</h3>
-  <p>This isn't just a "look but don't touch" museum! We have:</p>
-  <ul>
-    <li>Working vintage computers you can actually use</li>
-    <li>Regular <a href="https://ca.syssrc.com/wp/?page_id=85&civiwp=CiviCRM&q=civicrm%2Fevent%2Finfo&reset=1&id=454" target="_blank" rel="noopener noreferrer">repair weekends</a> - fix your stuff, ours, or help someone!</li>
-    <li>Guided demonstrations of historic technology</li>
-    <li>Educational programs for all ages</li>
-  </ul>
+  <div class="content-section">
+    <h3 class="section-title">Interactive Experiences</h3>
+    <p>This isn't just a "look but don't touch" museum! We have:</p>
+    <ul>
+      <li>Working vintage computers you can actually use</li>
+      <li>Regular <a href="https://ca.syssrc.com/wp/?page_id=85&civiwp=CiviCRM&q=civicrm%2Fevent%2Finfo&reset=1&id=454" target="_blank" rel="noopener noreferrer">repair weekends</a> - fix your stuff, ours, or help someone!</li>
+      <li>Guided demonstrations of historic technology</li>
+      <li>Educational programs for all ages</li>
+    </ul>
+  </div>
 
   <p class="center" style="margin-top: 20px;">
     {{ button("/visit/", "Plan Your Visit", "primary") }}

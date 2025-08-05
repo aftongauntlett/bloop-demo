@@ -7,13 +7,15 @@ title: Home
 
 <div class="content-box-light">
 
-<h1 class="page-title">🖥️ Welcome to the Bloop Museum</h1>
-  <h2 style="font-size: 18px; font-weight: bold; text-align: center; margin: 20px 0;" class="text-primary">
-    An Electronic Entertainment Museum dedicated to computers, games, media, and gadgets!
-  </h2>
+<div class="hero-section">
+  <h1 class="hero-title">Welcome to the Bloop Museum</h1>
+  <p class="hero-subtitle">An Electronic Entertainment Museum dedicated to computers, games, media, and gadgets!</p>
+  <div class="hero-divider"></div>
+</div>
 
-  <h3 align="center">A Message from Our Founder</h3>
-  <p align="center">
+<div class="content-section">
+  <h3 class="text-center">A Message from Our Founder</h3>
+  <p class="text-center">
     Watch this special message about our incredible journey to Pittsburgh:
   </p>
 
@@ -24,14 +26,13 @@ title: Home
       </td>
     </tr>
   </table>
-  
-  
+</div>
 
-  
+<div class="content-section">
   <table width="100%" cellpadding="12" cellspacing="0" class="border-black" style="margin: 20px 0;">
     <tr class="bg-primary text-white">
       <td style="font-weight: bold; text-align: center; font-size: 14px;">
-        🎉 WE DID IT: We moved to Pittsburgh! 🎉
+        WE DID IT: We moved to Pittsburgh!
       </td>
     </tr>
     <tr class="bg-accent">
@@ -40,14 +41,16 @@ title: Home
         we continue operating at the System Source Computer Museum. 
         <a href="/visit/" style="font-weight: bold;">Learn more about visiting us!</a>
         <br><br>
-        <div align="center">
-        {{ button("/thankyou/", "🎉 Read Our Thank You Message", "primary") }}
+        <div class="text-center">
+        {{ button("/thankyou/", "Read Our Thank You Message", "primary") }}
         </div>
       </td>
     </tr>
   </table>
+</div>
   
-  <h2>🎮 What Makes Us Special?</h2>
+<div class="content-section">
+  <h2 class="section-title">What Makes Us Special?</h2>
   
   <table width="100%" cellpadding="10" cellspacing="0">
     <tr>
@@ -61,12 +64,14 @@ title: Home
         </ul>
       </td>
       <td width="40%" align="center">
-        <img src="/images/museum-display.jpg" alt="Museum display showcase" width="300" border="1">
+        <img src="/images/museum-display.jpg" alt="Museum display showcase" width="300" border="1" class="section-image">
       </td>
     </tr>
   </table>
+</div>
   
-  <h2>🏛️ Three Museums in One!</h2>
+<div class="content-section">
+  <h2 class="section-title">Three Museums in One!</h2>
   <p>
     When you visit, you get a personalized tour of <b>three</b> museums:
   </p>
@@ -78,23 +83,26 @@ title: Home
   
   <table width="100%" cellpadding="0" cellspacing="0">
     <tr>
-      <td align="center">
-        <img src="/images/computer-display-tables.jpg" alt="Computer display tables" width="400" border="1">
+      <td class="text-center">
+        <img src="/images/computer-display-tables.jpg" alt="Computer display tables" width="400" border="1" class="section-image">
       </td>
     </tr>
   </table>
+</div>
   
-  <h2>🔥 Recent Highlights</h2>
+<div class="content-section">
+  <h2 class="section-title">Recent Highlights</h2>
   <ul>
-    <li>🦸 <b>Data Recovery Heroes:</b> We helped exonerate two falsely convicted men by recovering critical data from an old floppy disk!</li>
-    <li>🖥️ <b>Oldest Running Computer:</b> Home to the 1956 Bendix G-15 - possibly North America's oldest functioning computer</li>
-    <li>💾 <b>Preservation Champions:</b> Saved the only working BIOS for rare systems like the Montgomery Ward Cybervision 2001</li>
-    <li>🌍 <b>Global Events:</b> We participate in local, regional, national, and international tech events</li>
+    <li><b>Data Recovery Heroes:</b> We helped exonerate two falsely convicted men by recovering critical data from an old floppy disk!</li>
+    <li><b>Oldest Running Computer:</b> Home to the 1956 Bendix G-15 - possibly North America's oldest functioning computer</li>
+    <li><b>Preservation Champions:</b> Saved the only working BIOS for rare systems like the Montgomery Ward Cybervision 2001</li>
+    <li><b>Global Events:</b> We participate in local, regional, national, and international tech events</li>
   </ul>
+</div>
   
-  <div class="action-box" style="margin: 20px 0;">
-    <b style="font-size: 14px;">Ready to explore?</b><br><br>
-    {{ button("/visit/", "Plan Your Visit", "primary") }}
-    {{ button("/contact/", "Schedule a Tour", "primary") }}
-  </div>
+<div class="action-box" style="margin: 20px 0;">
+  <b style="font-size: 14px;">Ready to explore?</b><br><br>
+  {{ button("/visit/", "Plan Your Visit", "primary") }}
+  {{ button("/contact/", "Schedule a Tour", "primary") }}
+</div>
 </div>

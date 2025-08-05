@@ -12,7 +12,7 @@ A retro-inspired website for the Bloop Museum - an electronic entertainment muse
 
 This project serves as a **vintage-compatible museum website**:
 
-- **Pentium 90 Compatibility** - Must render perfectly on Netscape 4.0
+- **Pentium 90 Compatibility** - Must render perfectly on a Pentium 90 with Netscape 4.0
 - **Retro Aesthetic** - Embrace 90s web design principles without breaking functionality
 - **Museum Showcase** - Display the amazing 25,000+ artifact collection
 - **Educational Platform** - Perfect for school groups and tech enthusiasts
@@ -23,13 +23,13 @@ This project serves as a **vintage-compatible museum website**:
 ![Eleventy](https://img.shields.io/badge/Eleventy_3.1-000000?style=flat&logo=eleventy&logoColor=white)
 ![Nunjucks](https://img.shields.io/badge/Nunjucks-1C4913?style=flat&logo=nunjucks&logoColor=white)
 ![HTML4](https://img.shields.io/badge/HTML_4.0_Transitional-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS_2.1-1572B6?style=flat&logo=css3&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS_1.0-1572B6?style=flat&logo=css3&logoColor=white)
 ![Netscape](https://img.shields.io/badge/Netscape_4.0_Compatible-0066CC?style=flat&logo=netscape&logoColor=white)
 
 - **Eleventy 3.1.2** - Static site generator with zero-config setup
 - **Nunjucks Templating** - Component-based templates for reusability
 - **HTML 4.0 Transitional** - Maximum vintage browser compatibility
-- **CSS 2.1** - No modern features that break on Pentium 90
+- **CSS1** - No modern features that break on Pentium 90
 - **Table-based Layout** - No CSS Grid/Flexbox for Netscape 4.0 support
 - **Component System** - React-like reusable components for consistent spacing
 
@@ -56,7 +56,7 @@ npm run build
 npm run deploy
 ```
 
-The site will be available at `http://localhost:8081/`
+The site will be available at `http://localhost:8080/`
 
 ## Deployment
 
